@@ -1,0 +1,37 @@
+<h1>Folder:  {{$ctrl.repoName}}  | {{$ctrl.folderName}}</h1>
+
+
+File View
+
+<!-- <code-view code="$ctrl.file"></code-view> -->
+
+<!-- 
+<pre class="prettyprint linenums lang-js">class Voila {
+public:
+  // Voila
+  static const string VOILA = "Voila";
+
+  // will not interfere with embedded <a href="#voila2">tags</a>.
+}</pre> -->
+
+
+
+<div class="repos-list panel panel-default">
+    <div class="panel-heading clearfix">
+        <h4 class="panel-title pull-left">
+             README.md
+        </h4>
+    </div>
+    <div class="panel-body">
+    	<!-- <pre class="prettyprint linenums lang-js" > -->
+    	<div hljs hljs-source="$ctrl.file">
+		</div>
+    	<!-- </pre> -->
+      <!--   <div marked="$ctrl.file">
+        </div> -->
+    </div>
+</div>
+
+
+<!-- <repo-files repo-name="$ctrl.repoName" folder-page="$ctrl.folderName"></repo-files> -->
+

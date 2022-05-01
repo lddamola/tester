@@ -1,0 +1,38 @@
+<h2>Containers</h2>
+<table class="table">
+	<tr>
+		<td>ID</td>
+		<td>Image</td>
+		<td>Command</td>
+		<td>Created At</td>
+		<td>Status</td>
+		<td>Ports</td>
+		<td>Names</td>
+	</tr>
+	<tr  ng-repeat="container in $ctrl.containers">
+		<td>
+		<a ng-href="containers/{{container.containerId}}">
+			{{container.containerId}}
+		</td>
+		<td>{{container.image}}</td>
+		<td>{{container.command}}</td>
+		<td>{{container.created}}</td>
+		<td>{{container.status}}</td>
+		<td>{{container.ports}}</td>
+		<td>
+			{{container.names.split(',')}}
+<!-- 			<ul ng-init="names = container.names.split(',')">
+				{{names}
+				<li ng-repeat="name in names">{{{name}}</li>
+				}
+			</ul>
+ -->		</td>
+		<td>
+			<button class="btn" ng-if="!container.status.includes('Exited')"
+			ng-click="$ctrl.stopContainer(container)">Stop container</button>
+			<button class="btn" ng-if="container.status.includes('Exited')"ng-click="$ctrl.deleteContainer(container, $index)">Delete container</button>
+
+		</td>
+	</tr>
+    
+</ul> 

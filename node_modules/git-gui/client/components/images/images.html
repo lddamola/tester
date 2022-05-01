@@ -1,0 +1,14 @@
+<h2>Images</h2>
+<table class="table">
+	<tr  ng-repeat="image in $ctrl.images">
+		<td>{{image.repository}}</td>
+		<td>{{image.imageId}}</td>
+		<td>{{image.size}}</td>
+		<td>{{image.tag}}</td>
+		<td>{{image.created}}</td>
+		<td>
+			<button class="btn" ng-click="$ctrl.createContainer(image)">create container</button>
+		</td>
+	</tr>
+    
+</ul> 
